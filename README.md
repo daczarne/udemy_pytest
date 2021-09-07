@@ -1,2 +1,3 @@
-# udemy_pytest
-Testing in Python with Pytest
+# Testing in Python with Pytest
+
+Automated testing with Pytest.

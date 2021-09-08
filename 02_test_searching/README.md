@@ -47,6 +47,8 @@ markers =
   engine: marks tests as belonging to the engine set of tests (deselect with '-m "not engine"')
 ```
 
+Additionally, any `markers` that have been documented in `pytest.ini` will appear on the results of `pytest --markers`. This way, newcomers to the test suite can be brought up to speed with how the tests are set up.
+
 We can also add more than one mark to our test. This become really handy when marking *smoke tests*, or *regression tests*, etc.
 
 ![test smoke](img/02_test_smoke.png)

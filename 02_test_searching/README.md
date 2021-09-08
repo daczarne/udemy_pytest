@@ -76,3 +76,26 @@ We can also use `not` to prevent specific tests from running
 ``` bash
 pytest -m "not engine"
 ```
+
+## Using classes
+
+Sometimes we need to give a large number of tests the same mark (plus some additional marks more specific to each test, or smaller subsets of them). We can avoid this by creating a class and marking that class. Each test function now becomes a method in that class and thus needs a `self` parameter.
+
+``` py
+@mark.body
+class BodyTests:
+  
+  @mark.door
+  def test_body_functions_as_expected(self):
+    assert True
+  
+  def test_bumper(self):
+    assert True
+  
+  def test_windshield(self):
+    assert True
+```
+
+I can now run `pytest -m <mark_name>` and all tests in that class will be run.
+
+![test class](img/06_test_class.png)

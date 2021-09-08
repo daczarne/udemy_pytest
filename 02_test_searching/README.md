@@ -37,7 +37,7 @@ It's preferable to over mark (that is,s define marks that we then don't really u
 pytest -m engine
 ```
 
-![](img/01_test_marking.png)
+![test marking](img/01_test_marking.png)
 
 If the marker is not registered in the `pytest.ini` configuration file, `pytest` will through a warning letting you know that there are tests that don't have the requested marker. To register a `mark` just add it to the `pytest.ini` as shown bellow
 
@@ -49,6 +49,30 @@ markers =
 
 We can also add more than one mark to our test. This become really handy when marking *smoke tests*, or *regression tests*, etc.
 
-![](img/02_test_smoke.png)
+![test smoke](img/02_test_smoke.png)
 
 With this, we only need to add or remove markers to add or remove tests to specific suites.
+
+## Running multiple marks
+
+We can use set keywords `and` and `or` to run tests with multiple or different marks. For example, if we run `"body and door"`, `pytest` will run only tests that have both the `body` and the `door` marks:
+
+``` bash
+pytest -m "body and door"
+```
+
+![and mark](img/03_and_mark.png)
+
+If instead we run `"body or engine"` then `pytest` will run all test with mark `body` and all tests with mark `engine`
+
+``` bash
+pytest -m "body or engine"
+```
+
+![or mark](img/04_or_mark.png)
+
+We can also use `not` to prevent specific tests from running
+
+``` bash
+pytest -m "not engine"
+```

@@ -1,3 +1,5 @@
+*.html linguist-vendored
+
 *.bib linguist-detectable
 *.cfg linguist-detectable
 *.JSON linguist-detectable

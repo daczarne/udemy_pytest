@@ -9,6 +9,8 @@
 *.sql linguist-detectable
 *.sql linguist-language=sql
 *.svg linguist-detectable
+*.ini linguist-detectable
 *.toml linguist-detectable
 *.yml linguist-detectable
 *.yaml linguist-detectable
+*.xml linguist-detectable

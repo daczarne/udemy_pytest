@@ -17,6 +17,7 @@ proj-name
   |   |_ __init__.py
   |   |_ ...
   |
+  |_ setup.py
   |_ other_files
 ```
 

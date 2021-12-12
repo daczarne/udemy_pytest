@@ -23,7 +23,7 @@ proj-name
   |
   |_ tox.ini
   |_ setup.py
-  |_ other_files
+  |_ ...
 ```
 
 In it we need to include a list of testing environments under the `tox` header, and a list of test dependencies to install and commands to run under the `testenv` header. No code dependencies should be included here, only dependencies of the testing environment.

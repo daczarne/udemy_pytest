@@ -1,6 +1,6 @@
 # Test fixtures
 
-Sometimes multiple of our tests require the same boilerplate code to be used. To avoid repetition we use `fixtures`. To do so, first we need to create a `conftest.py` script. Every test in every file that is located in a child directory of the directory that holds the `conftest.py` script can access it. We generally use this functions to set up environments like access to DBs, or utility functions like launching a browser.
+Sometimes multiple of our tests require the same boilerplate code to be used. To avoid repetition we use `fixtures`. To do so, first we need to create a `conftest.py` script. Every test in every file that is located in a child directory of the directory that holds the `conftest.py` script can access it. We generally use these functions to set up environments like access to DBs, or utility functions like launching a browser.
 
 In this file we will place some helper functions that rids us of having to write and re-write all our boilerplate code. Thanks to some `pytest` magic, we don't even have to import the functions to the `test_*` script. To signal that a function in `conftest.py` is a `fixture` we use the `@fixture` decorator.
 

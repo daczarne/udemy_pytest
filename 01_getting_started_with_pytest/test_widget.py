@@ -1,15 +1,16 @@
 def test_widget_functions_as_expected():
-  assert True
+    assert True
 
 
 def test_widget_fails():
-  assert False
+    assert False
 
 
 def some_utils_function():
-  print("testing! testing! testing!")
+    print("testing! testing! testing!")
 
 
 def test_another_passed_test():
-  assert True
+    some_utils_function()
+    assert True
 
